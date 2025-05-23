@@ -9,7 +9,7 @@ const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage.jsx"));
 const MoviesDetailsPage = lazy(() =>
   import("../../pages/MovieDetailsPage/MovieDetailsPage.jsx")
 );
-const MovieCast = lazy(() => import("../Cast/MovieCast.jsx"));
+const MovieCast = lazy(() => import("../MovieCast/MovieCast.jsx"));
 const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews.jsx"));
 const NotFoundPage = lazy(() =>
   import("../../pages/NotFoundPage/NotFoundPage.jsx")

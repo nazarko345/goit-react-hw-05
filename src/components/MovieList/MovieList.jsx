@@ -1,7 +1,7 @@
 import css from "./MovieList.module.css";
 import { Link, useLocation } from "react-router-dom";
 
-export default function HomePage({movies}) {
+export default function MovieList({movies}) {
   const location = useLocation();
 
   return (
