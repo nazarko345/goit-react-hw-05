@@ -10,8 +10,6 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
 
-  // const location = useLocation();
-
   useEffect(() => {
     async function loadMovies() {
       try {

@@ -1,5 +1,5 @@
 import css from "./GoBackBtn.module.css";
-import { Outlet, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 

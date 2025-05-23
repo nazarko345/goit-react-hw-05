@@ -3,9 +3,12 @@ import { useEffect, useState } from "react";
 import { searchMovies } from "../../movies-api.js";
 import { Link, useSearchParams, useLocation } from "react-router-dom";
 import { useDebounce } from "use-debounce";
+import { BeatLoader } from "react-spinners";
 
 export default function MoviesPage() {
     const [movies, setMovies] = useState([]);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
     
     const query = searchParams.get("query") || "";
@@ -22,7 +25,11 @@ export default function MoviesPage() {
         const data = await searchMovies(debouncedQuery);
         setMovies(data);
       } catch (error) {
+        setError(true)
         console.log(error);
+      } finally {
+        setError(false);
+        setLoading(false)
       }
     }
 
@@ -45,9 +52,9 @@ export default function MoviesPage() {
         <button type="submit">Search</button>
       </form>
 
-      {movies.length === 0 && query !== "" && (
-        <p className={css.noMovie}>No movies found!</p>
-      )}
+      {loading && <BeatLoader />}
+
+      {error && <p className={css.noMovie}>No movies found!</p>}
 
       <ul className={css.list}>
         {movies.map((movie) => (
