@@ -1,0 +1,91 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.movieCard {
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.image {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detailsItem {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #777;
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.separator {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.additional {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
